@@ -1,0 +1,545 @@
+/* ==================== 
+   Portal Hub 樣式表
+   檔案結構：
+   1. 變數設定 (CSS Variables)
+   2. 重置樣式 (Reset)
+   3. 頁首樣式 (Header)
+   4. 搜尋列 (Search Bar)
+   5. 側邊選單 (Sidebar)
+   6. 服務區域 (Service Area)
+   7. 頁尾樣式 (Footer)
+   8. 響應式設計 (RWD)
+==================== */
+
+/* ==================== 1. 變數設定 ==================== */
+:root {
+    /* 主要顏色 - 中山大學配色（山的綠色 + 海的藍色） */
+    --primary-color: #1B5E20;      /* 山 - 深綠色 */
+    --secondary-color: #0277BD;    /* 海 - 深藍色 */
+    --accent-color: #4CAF50;       /* 強調 - 亮綠色 */
+    --header-bg: #E8F5E9;          /* 頁首背景（淺綠） */
+    --sidebar-bg: #C8E6C9;         /* 側邊欄背景（淺綠） */
+    --content-bg: #E3F2FD;         /* 內容區背景（淺藍） */
+    
+    /* 分類顏色 - 綠藍色系 */
+    --category-student: #2E7D32;   /* 學生專區 - 綠色 */
+    --category-course: #00838F;    /* 課程學習 - 青色 */
+    --category-faculty: #1565C0;   /* 教職申辦 - 藍色 */
+    --category-teaching: #00695C;  /* 教學 - 藍綠色 */
+    --category-library: #5E35B1;   /* 圖書研究 - 紫色 */
+    --category-finance: #37474F;   /* 帳務財物 - 深灰藍 */
+    
+    /* 文字顏色 */
+    --text-color: #333333;
+    --text-light: #666666;
+    --text-white: #ffffff;
+    
+    /* 字體設定 */
+    --font-family: 'Microsoft JhengHei', '微軟正黑體', Arial, sans-serif;
+    --font-size-base: 14px;
+    --font-size-small: 12px;
+    --font-size-large: 16px;
+    
+    /* 間距設定 */
+    --spacing-xs: 4px;
+    --spacing-sm: 8px;
+    --spacing-md: 12px;
+    --spacing-lg: 16px;
+    --spacing-xl: 24px;
+    
+    /* 圓角與陰影 */
+    --border-radius: 4px;
+    --border-radius-lg: 8px;
+    --shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    --shadow-hover: 0 4px 8px rgba(0, 0, 0, 0.15);
+    
+    /* 側邊欄寬度 */
+    --sidebar-width: 220px;
+}
+
+/* ==================== 2. 重置樣式 ==================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-family);
+    font-size: var(--font-size-base);
+    color: var(--text-color);
+    background-color: var(--content-bg);
+    min-height: 100vh;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+button {
+    cursor: pointer;
+    font-family: inherit;
+}
+
+/* ==================== 3. 頁首樣式 ==================== */
+.header {
+    background: linear-gradient(to right, var(--header-bg), #B3E5FC);
+    padding: var(--spacing-sm) var(--spacing-lg);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 3px solid;
+    border-image: linear-gradient(to right, var(--primary-color), var(--secondary-color)) 1;
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-md);
+}
+
+.system-notice {
+    background-color: #FFF8DC;
+    padding: var(--spacing-xs) var(--spacing-md);
+    border-radius: var(--border-radius);
+    font-size: var(--font-size-small);
+    color: #B22222;
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-xs);
+}
+
+.notice-icon {
+    font-size: 14px;
+}
+
+.login-btn {
+    background-color: var(--primary-color);
+    color: var(--text-white);
+    border: none;
+    padding: var(--spacing-sm) var(--spacing-lg);
+    border-radius: var(--border-radius);
+    font-size: var(--font-size-base);
+    transition: background-color 0.3s;
+}
+
+.login-btn:hover {
+    background-color: var(--secondary-color);
+}
+
+.header-center {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-md);
+}
+
+.logo {
+    height: 60px;
+    width: auto;
+}
+
+.site-title {
+    display: flex;
+    flex-direction: column;
+}
+
+.title-main {
+    font-size: 18px;
+    color: var(--text-color);
+}
+
+.title-sub {
+    font-size: 28px;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+}
+
+.top-nav {
+    display: flex;
+    gap: var(--spacing-md);
+}
+
+.top-nav-link {
+    padding: var(--spacing-xs) var(--spacing-sm);
+    color: var(--text-color);
+    font-size: var(--font-size-small);
+    transition: color 0.3s;
+}
+
+.top-nav-link:hover,
+.top-nav-link.active {
+    color: var(--accent-color);
+}
+
+/* ==================== 4. 搜尋列 ==================== */
+.search-bar {
+    background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+    padding: var(--spacing-sm) var(--spacing-lg);
+}
+
+.search-container {
+    max-width: 400px;
+    display: flex;
+    gap: var(--spacing-sm);
+}
+
+.search-input {
+    flex: 1;
+    padding: var(--spacing-sm) var(--spacing-md);
+    border: none;
+    border-radius: var(--border-radius);
+    font-size: var(--font-size-base);
+}
+
+.search-input:focus {
+    outline: 2px solid var(--accent-color);
+}
+
+.search-btn {
+    background-color: #666;
+    color: var(--text-white);
+    border: none;
+    padding: var(--spacing-sm) var(--spacing-lg);
+    border-radius: var(--border-radius);
+    transition: background-color 0.3s;
+}
+
+.search-btn:hover {
+    background-color: #555;
+}
+
+/* ==================== 5. 側邊選單 ==================== */
+.main-content {
+    display: flex;
+    min-height: calc(100vh - 180px);
+}
+
+.sidebar {
+    width: var(--sidebar-width);
+    background: linear-gradient(to bottom, var(--sidebar-bg), #81D4FA);
+    padding: var(--spacing-md);
+    flex-shrink: 0;
+}
+
+.sidebar-logo {
+    text-align: center;
+    padding: var(--spacing-md);
+    margin-bottom: var(--spacing-md);
+}
+
+.sidebar-logo img {
+    width: 80%;
+    max-width: 150px;
+    border-radius: var(--border-radius-lg);
+    margin-bottom: var(--spacing-sm);
+}
+
+.logo-text {
+    display: block;
+    font-size: 20px;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+/* 分類選單 */
+.category-menu {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-sm);
+}
+
+.menu-category {
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: var(--border-radius);
+    overflow: hidden;
+}
+
+.category-header {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    padding: var(--spacing-sm) var(--spacing-md);
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+/* 各分類的顏色 */
+.menu-category[data-category="student"] .category-header {
+    background-color: var(--category-student);
+    color: var(--text-white);
+}
+
+.menu-category[data-category="course"] .category-header {
+    background-color: var(--category-course);
+    color: var(--text-white);
+}
+
+.menu-category[data-category="faculty"] .category-header {
+    background-color: var(--category-faculty);
+    color: var(--text-white);
+}
+
+.menu-category[data-category="teaching"] .category-header {
+    background-color: var(--category-teaching);
+    color: var(--text-white);
+}
+
+.menu-category[data-category="library"] .category-header {
+    background-color: var(--category-library);
+    color: var(--text-white);
+}
+
+.menu-category[data-category="finance"] .category-header {
+    background-color: var(--category-finance);
+    color: var(--text-white);
+}
+
+.category-icon {
+    font-size: 16px;
+}
+
+.category-title {
+    font-weight: bold;
+    font-size: var(--font-size-base);
+}
+
+.category-links {
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: var(--spacing-sm);
+}
+
+.category-links li {
+    padding: var(--spacing-xs) var(--spacing-sm);
+}
+
+.category-links a {
+    color: var(--text-color);
+    font-size: var(--font-size-small);
+    display: block;
+    padding: var(--spacing-xs) 0;
+    transition: color 0.3s;
+}
+
+.category-links a:hover {
+    color: var(--accent-color);
+}
+
+.category-links a::before {
+    content: "• ";
+    color: var(--primary-color);
+}
+
+.more-link {
+    color: var(--accent-color) !important;
+    font-style: italic;
+}
+
+/* ==================== 6. 服務區域 ==================== */
+.service-area {
+    flex: 1;
+    padding: var(--spacing-lg);
+    overflow-y: auto;
+}
+
+.service-section {
+    margin-bottom: var(--spacing-xl);
+}
+
+.section-title {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    margin-bottom: var(--spacing-md);
+    padding-bottom: var(--spacing-sm);
+    border-bottom: 2px solid var(--secondary-color);
+}
+
+.section-title span {
+    color: var(--primary-color);
+    font-size: var(--font-size-large);
+    font-weight: bold;
+}
+
+.see-more {
+    color: var(--secondary-color);
+    font-size: 20px;
+    font-weight: bold;
+    transition: transform 0.3s;
+}
+
+.see-more:hover {
+    transform: translateX(5px);
+}
+
+/* 服務格線 */
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    gap: var(--spacing-md);
+}
+
+.service-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: var(--spacing-sm);
+    border-radius: var(--border-radius);
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+}
+
+.service-item:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-hover);
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.service-icon {
+    width: 70px;
+    height: 70px;
+    border-radius: var(--border-radius-lg);
+    overflow: hidden;
+    margin-bottom: var(--spacing-sm);
+    box-shadow: var(--shadow);
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.service-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.service-name {
+    font-size: var(--font-size-small);
+    color: var(--text-color);
+    line-height: 1.3;
+    max-width: 90px;
+    word-wrap: break-word;
+}
+
+/* ==================== 7. 頁尾樣式 ==================== */
+.footer {
+    background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+    color: var(--text-white);
+    padding: var(--spacing-md);
+    text-align: center;
+}
+
+.footer-content p {
+    font-size: var(--font-size-small);
+    margin: var(--spacing-xs) 0;
+}
+
+/* ==================== 8. 響應式設計 (RWD) ==================== */
+/* 平板裝置 */
+@media screen and (max-width: 1024px) {
+    .service-grid {
+        grid-template-columns: repeat(auto-fill, minmax(90px, 1fr));
+    }
+    
+    .header {
+        flex-wrap: wrap;
+        gap: var(--spacing-sm);
+    }
+    
+    .header-center {
+        order: -1;
+        flex-basis: 100%;
+        justify-content: center;
+    }
+}
+
+/* 手機裝置 */
+@media screen and (max-width: 768px) {
+    :root {
+        --sidebar-width: 100%;
+    }
+    
+    .main-content {
+        flex-direction: column;
+    }
+    
+    .sidebar {
+        width: 100%;
+        order: 2;
+    }
+    
+    .service-area {
+        order: 1;
+    }
+    
+    .header-left,
+    .header-right {
+        flex-basis: 100%;
+        justify-content: center;
+    }
+    
+    .top-nav {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .service-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+    
+    .category-menu {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--spacing-sm);
+    }
+    
+    .category-links {
+        display: none;
+    }
+    
+    .menu-category.expanded .category-links {
+        display: block;
+    }
+}
+
+/* 小手機裝置 */
+@media screen and (max-width: 480px) {
+    .service-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .service-icon {
+        width: 55px;
+        height: 55px;
+    }
+    
+    .service-name {
+        font-size: 11px;
+    }
+    
+    .category-menu {
+        grid-template-columns: 1fr;
+    }
+}

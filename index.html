@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NSYSU Portal Hub - 國立中山大學入口網站</title>
+    
+    <!-- 外部 CSS 樣式表 -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- ==================== 頁首區域 ==================== -->
+    <header class="header">
+        <div class="header-left">
+            <!-- 系統訊息 -->
+            <div class="system-notice">
+                <span class="notice-icon">🔔</span>
+                <span>請使用校園帳號登入！</span>
+            </div>
+            <!-- 登入按鈕 -->
+            <button class="login-btn" id="loginBtn">登入</button>
+        </div>
+        
+        <div class="header-center">
+            <!-- Logo 與網站名稱 -->
+            <div class="logo-container">
+                <img src="assets/校徽.png" alt="中山大學校徽" class="logo">
+                <div class="site-title">
+                    <span class="title-main">國立中山大學</span>
+                    <span class="title-sub">myNSYSU</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="header-right">
+            <!-- 語言切換與其他連結 -->
+            <nav class="top-nav">
+                <a href="#" class="top-nav-link active">中文版</a>
+                <a href="#" class="top-nav-link">English</a>
+                <a href="#" class="top-nav-link">常用服務</a>
+                <a href="#" class="top-nav-link">聯絡我們</a>
+                <a href="#" class="top-nav-link">最新消息</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- ==================== 搜尋列 ==================== -->
+    <div class="search-bar">
+        <div class="search-container">
+            <input type="text" class="search-input" id="searchInput" placeholder="請先登入">
+            <button class="search-btn" id="searchBtn">搜尋</button>
+        </div>
+    </div>
+
+    <!-- ==================== 主要內容區域 ==================== -->
+    <main class="main-content">
+        <!-- 左側選單 -->
+        <aside class="sidebar">
+            <!-- 網站 Logo -->
+            <div class="sidebar-logo">
+                <img src="assets/國立中山大學.jpeg" alt="myNSYSU">
+                <span class="logo-text">myNSYSU</span>
+            </div>
+            
+            <!-- 分類選單 -->
+            <nav class="category-menu">
+                <!-- 學生專區 -->
+                <div class="menu-category" data-category="student">
+                    <div class="category-header">
+                        <span class="category-icon">🎓</span>
+                        <span class="category-title">學生專區</span>
+                    </div>
+                    <ul class="category-links">
+                        <li><a href="#">學生綜合資料</a></li>
+                        <li><a href="#">通識課程地圖</a></li>
+                        <li><a href="#">個人資訊</a></li>
+                        <li><a href="#" class="more-link">more ...</a></li>
+                    </ul>
+                </div>
+                
+                <!-- 課程學習 -->
+                <div class="menu-category" data-category="course">
+                    <div class="category-header">
+                        <span class="category-icon">📚</span>
+                        <span class="category-title">課程學習</span>
+                    </div>
+                    <ul class="category-links">
+                        <li><a href="#">通識課程地圖</a></li>
+                        <li><a href="#">跨領域實習</a></li>
+                        <li><a href="#">課程地圖</a></li>
+                        <li><a href="#" class="more-link">more ...</a></li>
+                    </ul>
+                </div>
+                
+                <!-- 教職申辦 -->
+                <div class="menu-category" data-category="faculty">
+                    <div class="category-header">
+                        <span class="category-icon">👨‍🏫</span>
+                        <span class="category-title">教職申辦</span>
+                    </div>
+                    <ul class="category-links">
+                        <li><a href="#">教職員投票</a></li>
+                        <li><a href="#">教師彈性薪資查詢</a></li>
+                        <li><a href="#">教研人員電子聘書</a></li>
+                        <li><a href="#" class="more-link">more ...</a></li>
+                    </ul>
+                </div>
+                
+                <!-- 教學資源 -->
+                <div class="menu-category" data-category="teaching">
+                    <div class="category-header">
+                        <span class="category-icon">🏫</span>
+                        <span class="category-title">教學</span>
+                    </div>
+                    <ul class="category-links">
+                        <li><a href="#">通識課程地圖</a></li>
+                        <li><a href="#">成績與名次查詢</a></li>
+                        <li><a href="#">領域專長查詢系統</a></li>
+                        <li><a href="#" class="more-link">more ...</a></li>
+                    </ul>
+                </div>
+                
+                <!-- 圖書研究 -->
+                <div class="menu-category" data-category="library">
+                    <div class="category-header">
+                        <span class="category-icon">📖</span>
+                        <span class="category-title">圖書研究</span>
+                    </div>
+                    <ul class="category-links">
+                        <li><a href="#">期刊文獻傳遞服務</a></li>
+                        <li><a href="#">學位論文原創性檢查</a></li>
+                        <li><a href="#">Turnitin</a></li>
+                        <li><a href="#" class="more-link">more ...</a></li>
+                    </ul>
+                </div>
+                
+                <!-- 帳務財物 -->
+                <div class="menu-category" data-category="finance">
+                    <div class="category-header">
+                        <span class="category-icon">💰</span>
+                        <span class="category-title">帳務財物</span>
+                    </div>
+                    <ul class="category-links">
+                        <li><a href="#">保費說明</a></li>
+                        <li><a href="#">出國旅費E化結報系統</a></li>
+                        <li><a href="#">薪資入帳變更申請</a></li>
+                        <li><a href="#" class="more-link">more ...</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </aside>
+
+        <!-- 右側服務區域 -->
+        <section class="service-area">
+            <!-- 十大熱門服務 -->
+            <div class="service-section">
+                <h2 class="section-title">
+                    <span>十大熱門服務</span>
+                    <a href="#" class="see-more">></a>
+                </h2>
+                <div class="service-grid" id="hotServices">
+                    <!-- 服務項目會由 JavaScript 動態載入，或直接寫在這裡 -->
+                    <a href="#" class="service-item">
+                        <div class="service-icon">
+                            <img src="assets/教務處.jpeg" alt="教務資訊服務網">
+                        </div>
+                        <span class="service-name">教務資訊服務網</span>
+                    </a>
+                    
+                    <a href="#" class="service-item">
+                        <div class="service-icon">
+                            <img src="assets/學生事務處.jpeg" alt="成績與名次查詢">
+                        </div>
+                        <span class="service-name">成績與名次查詢</span>
+                    </a>
+                    
+                    <a href="#" class="service-item">
+                        <div class="service-icon">
+                            <img src="assets/國際事務處.jpeg" alt="學生請假">
+                        </div>
+                        <span class="service-name">學生請假(學生)</span>
+                    </a>
+                    
+                    <a href="#" class="service-item">
+                        <div class="service-icon">
+                            <img src="assets/總務處.jpeg" alt="到勤差假申請">
+                        </div>
+                        <span class="service-name">到勤差假申請/簽核</span>
+                    </a>
+                    
+                    <a href="#" class="service-item">
+                        <div class="service-icon">
+                            <img src="assets/管理學院.png" alt="付款查詢">
+                        </div>
+                        <span class="service-name">付款查詢暨付款通知</span>
+                    </a>
+                    
+                    <a href="#" class="service-item">
+                        <div class="service-icon">
+                            <img src="assets/工學院.png" alt="導生綜合資料">
+                        </div>
+                        <span class="service-name">導生綜合資料</span>
+                    </a>
+                    
+                    <a href="#" class="service-item">
+                        <div class="service-icon">
+                            <img src="assets/文學院.jpg" alt="Mail服務">
+                        </div>
+                        <span class="service-name">NSYSU Mail 服務</span>
+                    </a>
+                    
+                    <a href="#" class="service-item">
+                        <div class="service-icon">
+                            <img src="assets/社會科學院.jpg" alt="研究計畫">
+                        </div>
+                        <span class="service-name">研究計畫兼任助理學生專區</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- 近期新增服務 -->
+            <div class="service-section">
+                <h2 class="section-title">
+                    <span>近期新增服務</span>
+                    <a href="#" class="see-more">></a>
+                </h2>
+                <div class="service-grid" id="newServices">
+                    <a href="#" class="service-item">
+                        <div class="service-icon">
+                            <img src="assets/資訊管理學系.png" alt="領域專長查詢">
+                        </div>
+                        <span class="service-name">領域專長查詢系統</span>
+                    </a>
+                    
+                    <a href="#" class="service-item">
+                        <div class="service-icon">
+                            <img src="assets/電機工程學系.png" alt="跨領域實習">
+                        </div>
+                        <span class="service-name">跨領域實習 - 引路人計畫</span>
+                    </a>
+                    
+                    <a href="#" class="service-item">
+                        <div class="service-icon">
+                            <img src="assets/機械與機電工程.jpg" alt="學生聘僱查詢">
+                        </div>
+                        <span class="service-name">學生聘僱查詢系統</span>
+                    </a>
+                    
+                    <a href="#" class="service-item">
+                        <div class="service-icon">
+                            <img src="assets/光電工程學系.png" alt="校際選課">
+                        </div>
+                        <span class="service-name">本校生校際選課系統</span>
+                    </a>
+                    
+                    <a href="#" class="service-item">
+                        <div class="service-icon">
+                            <img src="assets/企業管理學系.png" alt="新課程網">
+                        </div>
+                        <span class="service-name">中山新課程網</span>
+                    </a>
+                    
+                    <a href="#" class="service-item">
+                        <div class="service-icon">
+                            <img src="assets/外國文學系.png" alt="成績查詢">
+                        </div>
+                        <span class="service-name">成績與名次查詢及探索學分申請</span>
+                    </a>
+                    
+                    <a href="#" class="service-item">
+                        <div class="service-icon">
+                            <img src="assets/政治與經濟學系.png" alt="學籍資料">
+                        </div>
+                        <span class="service-name">學籍資料查詢及下載</span>
+                    </a>
+                    
+                    <a href="#" class="service-item">
+                        <div class="service-icon">
+                            <img src="assets/劇場藝術學系.png" alt="學習預警">
+                        </div>
+                        <span class="service-name">aCARE 學習預警暨輔導追蹤系統</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- 各單位服務 -->
+            <div class="service-section">
+                <h2 class="section-title">
+                    <span>各單位服務</span>
+                    <a href="#" class="see-more">></a>
+                </h2>
+                <div class="service-grid" id="unitServices">
+                    <a href="#" class="service-item">
+                        <div class="service-icon">
+                            <img src="assets/教務處.jpeg" alt="教務處">
+                        </div>
+                        <span class="service-name">教務處</span>
+                    </a>
+                    
+                    <a href="#" class="service-item">
+                        <div class="service-icon">
+                            <img src="assets/學生事務處.jpeg" alt="學生事務處">
+                        </div>
+                        <span class="service-name">學生事務處</span>
+                    </a>
+                    
+                    <a href="#" class="service-item">
+                        <div class="service-icon">
+                            <img src="assets/總務處.jpeg" alt="總務處">
+                        </div>
+                        <span class="service-name">總務處</span>
+                    </a>
+                    
+                    <a href="#" class="service-item">
+                        <div class="service-icon">
+                            <img src="assets/國際事務處.jpeg" alt="國際事務處">
+                        </div>
+                        <span class="service-name">國際事務處</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ==================== 頁尾區域 ==================== -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2025 國立中山大學 National Sun Yat-sen University. All Rights Reserved.</p>
+            <p>地址：804高雄市鼓山區蓮海路70號 | 電話：(07)525-2000</p>
+        </div>
+    </footer>
+
+    <!-- 外部 JavaScript 檔案 -->
+    <script src="js/main.js"></script>
+</body>
+</html>
