@@ -1,0 +1,135 @@
+/* ==================== 
+   Portal Hub 樣式表
+   檔案結構：
+   1. 變數設定 (CSS Variables)
+   2. 重置樣式 (Reset)
+   3. 頁首樣式 (Header)
+   4. 搜尋列 (Search Bar)
+   5. 側邊選單 (Sidebar)
+   6. 服務區域 (Service Area)
+   7. 頁尾樣式 (Footer)
+   8. 響應式設計 (RWD)
+==================== */
+
+/* ==================== 1. 變數設定 ==================== */
+:root {
+    /* 主要顏色 - 中山大學配色（山的綠色 + 海的藍色） */
+    --primary-color: #1B5E20;      /* 山 - 深綠色 */
+    --secondary-color: #0277BD;    /* 海 - 深藍色 */
+    --accent-color: #4CAF50;       /* 強調 - 亮綠色 */
+    --header-bg: #E8F5E9;          /* 頁首背景（淺綠） */
+    --sidebar-bg: #C8E6C9;         /* 側邊欄背景（淺綠） */
+    --content-bg: #E3F2FD;         /* 內容區背景（淺藍） */
+    
+    /* 分類顏色 - 綠藍色系 */
+    --category-student: #2E7D32;   /* 學生專區 - 綠色 */
+    --category-course: #00838F;    /* 課程學習 - 青色 */
+    --category-faculty: #1565C0;   /* 教職申辦 - 藍色 */
+    --category-teaching: #00695C;  /* 教學 - 藍綠色 */
+    --category-library: #5E35B1;   /* 圖書研究 - 紫色 */
+    --category-finance: #37474F;   /* 帳務財物 - 深灰藍 */
+    
+    /* 文字顏色 */
+    --text-color: #333333;
+    --text-light: #666666;
+    --text-white: #ffffff;
+    
+    /* 字體設定 */
+    --font-family: 'Microsoft JhengHei', '微軟正黑體', Arial, sans-serif;
+    --font-size-base: 14px;
+    --font-size-small: 12px;
+    --font-size-large: 16px;
+    
+    /* 間距設定 */
+    --spacing-xs: 4px;
+    --spacing-sm: 8px;
+    --spacing-md: 12px;
+    --spacing-lg: 16px;
+    --spacing-xl: 24px;
+    
+    /* 圓角與陰影 */
+    --border-radius: 4px;
+    --border-radius-lg: 8px;
+    --shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    --shadow-hover: 0 4px 8px rgba(0, 0, 0, 0.15);
+    
+    /* 側邊欄寬度 */
+    --sidebar-width: 220px;
+}
+
+/* ==================== 2. 重置樣式 ==================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-family);
+    font-size: var(--font-size-base);
+    color: var(--text-color);
+    background-color: var(--content-bg);
+    min-height: 100vh;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+button {
+    cursor: pointer;
+    font-family: inherit;
+}
+
+/* ==================== 3. 頁首樣式 ==================== */
+
+
+/* ==================== 4. 搜尋列 ==================== */
+
+
+/* ==================== 5. 側邊選單 ==================== */
+
+
+/* 分類選單 */
+
+
+/* 各分類的顏色 */
+
+
+/* ==================== 6. 服務區域 ==================== */
+
+
+/* 服務格線 */
+
+
+/* ==================== 7. 頁尾樣式 ==================== */
+.footer {
+    background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+    color: var(--text-white);
+    padding: var(--spacing-md);
+    text-align: center;
+}
+
+.footer-content p {
+    font-size: var(--font-size-small);
+    margin: var(--spacing-xs) 0;
+}
+
+/* ==================== 8. 響應式設計 (RWD) ==================== */
+/* 平板裝置 */
+
+
+/* 手機裝置 */
+
+
+/* 小手機裝置 */
